@@ -7,7 +7,7 @@ module.exports = async function(deployer) {
     const token = await Token.deployed();
 
     // Deploy the CryptoExchange SC
-    await deployer.deploy(CryptoExchange);
+    await deployer.deploy(CryptoExchange, token.address);
     const cryptoExchange = await CryptoExchange.deployed();
 
     // Transfer all tamil token to CryptoExchange
