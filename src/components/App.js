@@ -3,6 +3,8 @@ import Web3 from 'web3';
 import logo from '../logo.png';
 import './App.css';
 import Navbar from './Navbar'
+import CryptExchange from '../abis/CryptoExchange.json'
+import Token from '../abis/Token.json'
 
 class App extends Component {
 
@@ -26,8 +28,11 @@ class App extends Component {
 
     this.setState({ ethBalance: ethBalance})
 
-    console.log(ethBalance)
-
+   // console.log(ethBalance)
+   const abi = Token.abi
+   const address = Token.networks.address
+   const token = new web3.eth.Contract(abi, address)
+    console.log(token)
 
   }
 
