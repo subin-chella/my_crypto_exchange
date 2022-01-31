@@ -38,9 +38,6 @@ class Navbar extends Component {
                         }
                         </li>
 
-                        
-
-
                     </ul>
 
 
